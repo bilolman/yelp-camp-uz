@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') %>
+
+<h1 class="mb-3">All Campgrounds</h1>
+
+<% for (campground of campgrounds) { %>
+<div class="card mb-3">
+	<div class="row">
+		<div class="col-md-4">
+			<% if(campground.images.length) { %>
+			<img
+				src="<%= campground.images[0].url %>"
+				alt="Campground image"
+				class="img-fluid"
+			/>
+			<% } else { %>
+			<img
+				src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg"
+				alt="Campground image"
+				class="img-fluid"
+			/>
+			<% } %>
+		</div>
+		<div class="col-md-8">
+			<div class="card-body">
+				<h5 class="card-title"><%= campground.title %></h5>
+				<p class="card-text">
+					<small class="text-muted"><%= campground.location %></small>
+				</p>
+				<p class="card-text"><%= campground.description %></p>
+				<a href="/campgrounds/<%= campground.id %>" class="btn btn-primary"
+					>View</a
+				>
+			</div>
+		</div>
+	</div>
+</div>
+<% } %>

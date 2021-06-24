@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head') %>
+	</head>
+
+	<body>
+		<div class="page d-flex flex-column vh-100">
+			<!-- navbar -->
+			<%- include('../partials/navbar') %>
+
+			<!-- main -->
+			<main class="container my-4">
+				<!-- flash -->
+				<%- include('../partials/flash') %>
+
+				<!-- body -->
+				<%- body %>
+			</main>
+
+			<!-- footer -->
+			<%- include('../partials/footer') %>
+
+			<!-- scripts -->
+			<%- include('../partials/scripts') %>
+		</div>
+	</body>
+</html>
